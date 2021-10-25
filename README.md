@@ -39,3 +39,5 @@
 
 ## Database 
 ![Esquema de database](./public/schema_database.png)
+
+## Dependências

@@ -4,8 +4,8 @@
 
 - [Integrantes](#integrantes)
 - [Rotas da API](#rotas-da-api)   
-  - [/users](#/users)
-  - [/events](#/events)
+  - [/users](#users)
+  - [/events](#events)
 ## Integrantes
   - Adriano Forcellini Pedretti
   - Enio Nical
@@ -19,12 +19,12 @@
 
 ## Rotas da API
 
-### /users
+### users
   - rota para fazer o cadastro - `POST name, email, password` 
   - rota para fazer o login - `POST email, password` *precisa retornar um token
   - decidir se vamos usar `role` ou não
   
-### /events 
+### events 
   ** necessário usar token
   - rota para ler todos os evento - `GET` *não mostrar log
   - rota para ler um evento - `GET - event_id` *não mostrar log

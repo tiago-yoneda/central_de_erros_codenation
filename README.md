@@ -33,3 +33,6 @@
   - rota para cadastrar evento - `POST level, description, log, origem ,createdAt, user_id`
   - rota para atualizar evento - `PUT + dados`
   - rota para apagar evento - `DELETE - evento_id`
+
+## Database 
+![Esquema de database](./public/schema_database.png)

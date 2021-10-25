@@ -4,8 +4,8 @@
 
 - [Integrantes](#integrantes)
 - [Rotas da API](#rotas-da-api)   
-  - [/users](#users)
-  - [/events](#events)
+  - [`/users`](#users)
+  - [`/events`](#events)
 ## Integrantes
   - Adriano Forcellini Pedretti
   - Enio Nical

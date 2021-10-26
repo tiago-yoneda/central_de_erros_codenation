@@ -41,9 +41,9 @@
 ![Esquema de database](./public/schema_database.png)
 
 ## Dependências
-  - Spring Data JPA
+  - Spring Data JPA **falta colocar
   - Spring Security
   - OAuth2 Client
   - Lombok
   - H2Database ou PostgreSQL Driver
-  - Spring Web
+  - Spring Web **falta colocar

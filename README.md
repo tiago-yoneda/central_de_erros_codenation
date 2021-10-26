@@ -43,12 +43,12 @@
 ![Esquema de database](./public/schema_database.png)
 
 ## Dependências
-  - Spring Data JPA **falta colocar
+  - Spring Data JPA
   - Spring Security
   - OAuth2 Client
   - Lombok
   - H2Database ou PostgreSQL Driver
-  - Spring Web **falta colocar
+  - Spring Web
 
 ## Andamento
   - configurada a conexão com o db - postgresql (verificar usando pgadmin)

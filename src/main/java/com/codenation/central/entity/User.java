@@ -6,32 +6,31 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-@EntityListeners(AuditingEntityListener.class)
-@Table(name = "Users")
 @Getter
 @Setter
+@Table(name = "users")
 public class User {
 
   @Id
+  @NotNull
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Column
   private String name;
 
-  @Column
   @Email
+  @Column
   private String email;
 
   @Column
   private String password;
 
+  @Column
   @CreatedDate
   private LocalDateTime createdAt;
 }

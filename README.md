@@ -1,5 +1,5 @@
 # Projeto Final Codenation - Central de Erros
-  - atualizado en 26/10/2021 - 11:19 - Yoneda
+  - atualizado em 26/10/2021 - 11:19 - Yoneda
 # Sumário
 
 - [Integrantes](#integrantes)

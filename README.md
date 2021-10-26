@@ -8,6 +8,8 @@
   - [`/events`](#events)
  - [Database](#database)
  - [Dependências](#dependências)
+ - [Andamento](#andamento)
+  - [Falta fazer](#falta-fazer)
 
 ## Integrantes
   - Adriano Forcellini Pedretti
@@ -47,3 +49,15 @@
   - Lombok
   - H2Database ou PostgreSQL Driver
   - Spring Web **falta colocar
+
+## Andamento
+  - configurada a conexão com o db - postgresql (verificar usando pgadmin)
+    - é crida a entidade User no database
+  - a aplicação roda e persiste no endereço `localhost:8080`
+    - existem algumas rotas
+
+    # Falta fazer
+    - criar a entidade eventos
+    - criar mais endpoints
+    - fazer a verificação via token no login
+    - verificar se é possivel consultar o db utilizando o token

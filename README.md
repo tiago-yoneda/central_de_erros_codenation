@@ -6,9 +6,9 @@
 - [Rotas da API](#rotas-da-api)   
   - [`/users`](#users)
   - [`/events`](#events)
- - [Database](#database)
- - [Dependências](#dependências)
- - [Andamento](#andamento)
+- [Database](#database)
+- [Dependências](#dependências)
+- [Andamento](#andamento)
   - [Falta fazer](#falta-fazer)
 
 ## Integrantes

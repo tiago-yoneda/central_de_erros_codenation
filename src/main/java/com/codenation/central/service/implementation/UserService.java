@@ -4,10 +4,12 @@ import com.codenation.central.entity.User;
 import com.codenation.central.repository.UserRepository;
 import com.codenation.central.service.interfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+@Service
 public class UserService implements UserServiceInterface {
 
   @Autowired

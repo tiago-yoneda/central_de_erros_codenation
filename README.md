@@ -2,6 +2,7 @@
 
 - atualizado em 26/10/2021 - 11:19 - Yoneda
 - atualizado em 27/10/2021 - 16:08 - Forcellini
+- atualizado em 27/10/2021 - 17:52 - group coding
 
 # Sumário
 
@@ -19,10 +20,8 @@
 - Adriano Forcellini Pedretti
 - Enio Nical
 - Felipe Santiago
-- Jederson Macedo
 - Johne Alves
 - Layo Kaminski
-- Marcus Witthoeft
 - Tiago Yoneda
 - Uilton Rocha
 
@@ -61,15 +60,19 @@ O endpoint deve ser acessível através do caminho `/events`
 - Spring Web
 
 ## Andamento
+  
+  ### O que está feito
+  - configurada a conexão com o db - postgresql (verificar usando pgadmin) - utilizando user/password postgres
+    - é crida a entidade User no database
+    - é crida a entidade Event no database
+  - a aplicação roda e persiste no endereço `localhost:8080`
+    - existem algumas rotas
+    - é possível fazer o login como admin/admin usando o `insomnia`
 
-- configurada a conexão com o db - postgresql (verificar usando pgadmin)
-  - é crida a entidade User no database
-- a aplicação roda e persiste no endereço `localhost:8080`
-  - existem algumas rotas
-  - fazer a verificação via token no login
-  - verificar se é possivel consultar o db utilizando o token
+    http://localhost:8080/oauth/token - `Form URL Encoded` grant_type = password, username/password = admin - Basic Auth admin/admin
+    - verificar se é possivel consultar o db utilizando o token
 
 
-    ### Falta fazer
-    - criar a entidade eventos
-    - criar mais endpoints
+  ### Falta fazer
+  - criar um endpoint de login para recuperar um token valido, fazendo a verificacao do usuario no db
+  - criar endpoints de crud relacionados a entidade eventos

@@ -20,7 +20,6 @@
 - Adriano Forcellini Pedretti
 - Enio Nical
 - Felipe Santiago
-- Jederson Macedo
 - Johne Alves
 - Layo Kaminski
 - Tiago Yoneda

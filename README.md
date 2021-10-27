@@ -67,9 +67,9 @@ O endpoint deve ser acessível através do caminho `/events`
 - a aplicação roda e persiste no endereço `localhost:8080`
   - existem algumas rotas
   - fazer a verificação via token no login
+  - verificar se é possivel consultar o db utilizando o token
 
 
     ### Falta fazer
     - criar a entidade eventos
     - criar mais endpoints
-    - verificar se é possivel consultar o db utilizando o token

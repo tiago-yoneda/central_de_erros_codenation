@@ -4,15 +4,14 @@ import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "users")
-public class User {
+@Table(name = "events")
+public class Event {
 
   @Id
   @NotNull
@@ -20,16 +19,22 @@ public class User {
   private Long id;
 
   @Column
-  private String name;
-
-  @Email
-  @Column
-  private String email;
+  private String level;
 
   @Column
-  private String password;
+  private String description;
+
+  @Column
+  private String log;
+
+  @Column
+  private String origem;
 
   @Column
   @CreatedDate
   private LocalDateTime createdAt;
+
+  // quantidade
+
+  //user_id many to one
 }

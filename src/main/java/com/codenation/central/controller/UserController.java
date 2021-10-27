@@ -16,11 +16,6 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    @GetMapping
-    public List<User> listAll() {
-        return service.findAll();
-    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public User save(@RequestBody User user ) {

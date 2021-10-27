@@ -22,6 +22,7 @@ public class EventService implements EventServiceInterface {
     return repository.save(object);
   }
 
+  @Override
   public List<Event> findAll() {
     return repository.findAll();
   }

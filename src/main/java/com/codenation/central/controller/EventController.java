@@ -57,6 +57,11 @@ public class EventController {
         return  service.findByCreatedAt(date, pageable);
     }
 
+    @GetMapping("level/{level}")
+    public List<Event> findByLevel (@PathVariable("level") String level, Pageable pageable) {
+        return  service.findByLevel(level, pageable);
+    }
+
     @GetMapping
     public List<EventDTO> findAll(Pageable pageable) {
         Page<Event> all = service.findAll(pageable);

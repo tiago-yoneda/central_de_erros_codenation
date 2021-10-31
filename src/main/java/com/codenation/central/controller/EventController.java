@@ -28,11 +28,15 @@ public class EventController {
         return service.save(event);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("id/{id}")
     public Optional<Event> findById (@PathVariable("id") Long id) {
         return  service.findById(id);
     }
 
+    @GetMapping("log/{log}")
+    public List<Event> findById (@PathVariable("log") String log) {
+        return  service.findByLog(log);
+    }
     @GetMapping
     public List<EventDTO> findByAll() {
         List<Event> all = service.findAll();

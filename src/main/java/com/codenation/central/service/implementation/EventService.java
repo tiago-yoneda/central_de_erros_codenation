@@ -27,6 +27,10 @@ public class EventService implements EventServiceInterface {
     return repository.findAll();
   }
 
+  public List<Event> findByLog(String log) {
+    return repository.findByLog(log);
+  }
+
   @Override
   public Optional<Event> findById(Long id) {
     return repository.findById(id);

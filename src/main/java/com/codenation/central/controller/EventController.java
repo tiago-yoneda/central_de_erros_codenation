@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -46,6 +47,12 @@ public class EventController {
     @GetMapping("description/{description}")
     public List<Event> findByDescription (@PathVariable("description") String description) {
         return  service.findByDescription(description);
+    }
+
+    @GetMapping("createdat/{createdat}")
+    public List<Event> findByCreatedAt (@PathVariable("createdat") String createdat) {
+        LocalDateTime date = LocalDateTime.parse(createdat);
+        return  service.findByCreatedAt(date);
     }
 
     @GetMapping

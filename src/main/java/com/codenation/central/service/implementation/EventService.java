@@ -28,7 +28,7 @@ public class EventService implements EventServiceInterface {
   }
 
   public List<Event> findByLog(String log) {
-    return repository.findByLog(log);
+    return repository.findAllByLog(log);
   }
 
   public List<Event> findByOrigem(String origem) {
@@ -36,6 +36,9 @@ public class EventService implements EventServiceInterface {
   }
   public List<Event> findByDescription(String description) {
     return repository.findAllByDescription(description);
+  }
+  public List<Event> findByCreatedAt(LocalDateTime date) {
+    return repository.findAllByCreatedAt(date);
   }
 
 

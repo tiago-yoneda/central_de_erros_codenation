@@ -30,4 +30,5 @@ public class UserService implements UserServiceInterface {
     public List<User> findAll() {
         return repository.findAll();
     }
+
 }

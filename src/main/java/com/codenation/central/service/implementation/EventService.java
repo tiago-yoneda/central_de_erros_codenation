@@ -33,11 +33,11 @@ public class EventService implements EventServiceInterface {
     return repository.findAllByLog(log, pageable);
   }
 
-  public List<Event> findByOrigem(String origem) {
-    return repository.findAllByOrigem(origem);
+  public List<Event> findByOrigem(String origem, Pageable pageable) {
+    return repository.findAllByOrigem(origem, pageable);
   }
-  public List<Event> findByDescription(String description) {
-    return repository.findAllByDescription(description);
+  public List<Event> findByDescription(String description, Pageable pageable) {
+    return repository.findAllByDescription(description, pageable);
   }
   public List<Event> findByCreatedAt(LocalDateTime date) {
     return repository.findAllByCreatedAt(date);

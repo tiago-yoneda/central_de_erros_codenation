@@ -41,13 +41,13 @@ public class EventController {
     }
 
     @GetMapping("origem/{origem}")
-    public List<Event> findByOrigem (@PathVariable("origem") String origem) {
-        return  service.findByOrigem(origem);
+    public List<Event> findByOrigem (@PathVariable("origem") String origem, Pageable pageable) {
+        return  service.findByOrigem(origem, pageable);
     }
 
     @GetMapping("description/{description}")
-    public List<Event> findByDescription (@PathVariable("description") String description) {
-        return  service.findByDescription(description);
+    public List<Event> findByDescription (@PathVariable("description") String description, Pageable pageable) {
+        return  service.findByDescription(description, pageable);
     }
 
     @GetMapping("createdat/{createdat}")

@@ -64,18 +64,6 @@ public class EventController {
 
     @GetMapping
     public List<EventDTO> findAll(Pageable pageable) {
-        Page<Event> all = service.findAll(pageable);
-        List<EventDTO> output = new ArrayList<>();
-
-        for ( Event event : all){
-            EventDTO eventDTO = new EventDTO();
-            eventDTO.setCreatedAt(event.getCreatedAt());
-            eventDTO.setId(event.getId());
-            eventDTO.setDescription(event.getDescription());
-            eventDTO.setLevel(event.getLevel());
-            eventDTO.setOrigem(event.getOrigem());
-            output.add(eventDTO);
-        }
-        return output;
+        return  service.findAll(pageable);
     }
 }

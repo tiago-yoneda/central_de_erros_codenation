@@ -1,6 +1,7 @@
 package com.codenation.central.service.implementation;
 
 import com.codenation.central.entity.Event;
+import com.codenation.central.entity.EventDTO;
 import com.codenation.central.repository.EventRepository;
 import com.codenation.central.service.interfaces.EventServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,8 +27,19 @@ public class EventService implements EventServiceInterface {
     }
 
     @Override
-    public Page<Event> findAll(Pageable pageable) {
-        return repository.findAll(pageable);
+    public List<EventDTO> findAll(Pageable pageable) {
+        List<EventDTO> output = new ArrayList<>();
+        Page<Event> all =  repository.findAll(pageable);
+        for ( Event event : all){
+            EventDTO eventDTO = new EventDTO();
+            eventDTO.setCreatedAt(event.getCreatedAt());
+            eventDTO.setId(event.getId());
+            eventDTO.setDescription(event.getDescription());
+            eventDTO.setLevel(event.getLevel());
+            eventDTO.setOrigem(event.getOrigem());
+            output.add(eventDTO);
+        }
+        return output;
     }
 
     public List<Event> findByLog(String log, Pageable pageable) {

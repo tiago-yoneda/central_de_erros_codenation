@@ -51,9 +51,9 @@ public class EventController {
     }
 
     @GetMapping("createdat/{createdat}")
-    public List<Event> findByCreatedAt (@PathVariable("createdat") String createdat) {
+    public List<Event> findByCreatedAt (@PathVariable("createdat") String createdat, Pageable pageable) {
         LocalDateTime date = LocalDateTime.parse(createdat);
-        return  service.findByCreatedAt(date);
+        return  service.findByCreatedAt(date, pageable);
     }
 
     @GetMapping

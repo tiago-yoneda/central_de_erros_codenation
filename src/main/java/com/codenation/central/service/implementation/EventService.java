@@ -39,8 +39,8 @@ public class EventService implements EventServiceInterface {
   public List<Event> findByDescription(String description, Pageable pageable) {
     return repository.findAllByDescription(description, pageable);
   }
-  public List<Event> findByCreatedAt(LocalDateTime date) {
-    return repository.findAllByCreatedAt(date);
+  public List<Event> findByCreatedAt(LocalDateTime date, Pageable pageable) {
+    return repository.findAllByCreatedAt(date, pageable);
   }
 
 

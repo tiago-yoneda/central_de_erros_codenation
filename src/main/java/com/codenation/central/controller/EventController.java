@@ -5,6 +5,7 @@ import com.codenation.central.entity.Event;
 import com.codenation.central.entity.EventDTO;
 import com.codenation.central.service.implementation.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,8 +36,8 @@ public class EventController {
     }
 
     @GetMapping("log/{log}")
-    public List<Event> findById (@PathVariable("log") String log) {
-        return  service.findByLog(log);
+    public List<Event> findById (@PathVariable("log") String log, Pageable pageable) {
+        return  service.findByLog(log, pageable);
     }
 
     @GetMapping("origem/{origem}")
@@ -56,7 +57,7 @@ public class EventController {
     }
 
     @GetMapping
-    public List<EventDTO> findByAll() {
+    public List<EventDTO> findAll() {
         List<Event> all = service.findAll();
         List<EventDTO> output = new ArrayList<>();
 

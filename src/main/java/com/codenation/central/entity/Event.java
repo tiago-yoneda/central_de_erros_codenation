@@ -34,7 +34,12 @@ public class Event {
   @CreatedDate
   private LocalDateTime createdAt;
 
+//  @ManyToOne
+//  @JoinColumn(name = "users_id")
+//  private User users;
+
   // quantidade
 
   //user_id many to one
+
 }

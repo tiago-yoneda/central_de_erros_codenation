@@ -11,6 +11,7 @@ import java.util.Optional;
 public interface EventRepository extends JpaRepository<Event, Long> {
   Optional<Event> findById(Long id);
   List<Event> findByLog(String Log);
-  List<Event> findByOrigem(String origem);
+  List<Event> findAllByOrigem(String origem);
+  List<Event> findAllByDescription(String description);
 
 }

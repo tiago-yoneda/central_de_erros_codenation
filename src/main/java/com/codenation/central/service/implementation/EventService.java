@@ -30,8 +30,12 @@ public class EventService implements EventServiceInterface {
   public List<Event> findByLog(String log) {
     return repository.findByLog(log);
   }
+
   public List<Event> findByOrigem(String origem) {
-    return repository.findByOrigem(origem);
+    return repository.findAllByOrigem(origem);
+  }
+  public List<Event> findByDescription(String description) {
+    return repository.findAllByDescription(description);
   }
 
 

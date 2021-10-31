@@ -18,7 +18,7 @@ public class User {
   @Id
   @NotNull
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long user_id;
+  private Long userId;
 
   @Column
   private String name;
@@ -33,7 +33,7 @@ public class User {
   @Column
   @CreatedDate
   private LocalDateTime createdAt;
-
-//  @OneToMany(mappedBy = "users")
-//  private List<Event> events;
+//
+  @OneToMany(mappedBy = "userId")
+  private List<Event> events;
 }

@@ -42,28 +42,30 @@ public class EventService implements EventServiceInterface {
         return output;
     }
 
+    @Override
     public List<Event> findByLog(String log, Pageable pageable) {
         return repository.findAllByLog(log, pageable);
     }
 
+    @Override
     public List<Event> findByOrigem(String origem, Pageable pageable) {
         return repository.findAllByOrigem(origem, pageable);
     }
 
+    @Override
     public List<Event> findByDescription(String description, Pageable pageable) {
         return repository.findAllByDescription(description, pageable);
     }
 
+    @Override
     public List<Event> findByCreatedAt(LocalDateTime date, Pageable pageable) {
         return repository.findAllByCreatedAt(date, pageable);
     }
 
-
+    @Override
     public List<Event> findByLevel(String level, Pageable pageable) {
         return repository.findAllByLevel(level, pageable);
     }
-
-
 
     @Override
     public Optional<Event> findById(Long id) {

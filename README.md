@@ -3,6 +3,8 @@
 - atualizado em 26/10/2021 - 11:19 - Yoneda
 - atualizado em 27/10/2021 - 16:08 - Forcellini
 - atualizado em 27/10/2021 - 17:52 - group coding
+- atualizado em 31/10/2021 - 13:00 - Forcellini
+
 
 # Sumário
 
@@ -71,8 +73,8 @@ O endpoint deve ser acessível através do caminho `/events`
 
     http://localhost:8080/oauth/token - `Form URL Encoded` grant_type = password, username/password = admin - Basic Auth admin/admin
     - verificar se é possivel consultar o db utilizando o token
+    - criar endpoints de crud relacionados a entidade eventos
 
 
   ### Falta fazer
   - criar um endpoint de login para recuperar um token valido, fazendo a verificacao do usuario no db
-  - criar endpoints de crud relacionados a entidade eventos

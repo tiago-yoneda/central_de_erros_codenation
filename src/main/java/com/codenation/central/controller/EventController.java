@@ -1,13 +1,14 @@
 package com.codenation.central.controller;
 
-import com.codenation.central.dto.EventDTO;
 import com.codenation.central.entity.Event;
-import com.codenation.central.mapper.EventMapper;
+//import com.codenation.central.mapper.EventMapper;
+import com.codenation.central.entity.EventDTO;
 import com.codenation.central.service.implementation.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,9 +18,9 @@ public class EventController {
 
     @Autowired
     private EventService service;
-
-    @Autowired
-    private EventMapper eventMapper;
+//
+//    @Autowired
+//    private EventMapper eventMapper;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -34,6 +35,18 @@ public class EventController {
 
     @GetMapping
     public List<EventDTO> findByAll() {
-        return eventMapper.map(service.findAll());
+        List<Event> all = service.findAll();
+        List<EventDTO> output = new ArrayList<>();
+
+        for ( Event event : all){
+            EventDTO eventDTO = new EventDTO();
+            eventDTO.setCreatedAt(event.getCreatedAt());
+            eventDTO.setId(event.getId());
+            eventDTO.setDescription(event.getDescription());
+            eventDTO.setLevel(event.getLevel());
+            eventDTO.setOrigem(event.getOrigem());
+            output.add(eventDTO);
+        }
+        return output;
     }
 }

@@ -37,6 +37,11 @@ public class EventController {
     public List<Event> findById (@PathVariable("log") String log) {
         return  service.findByLog(log);
     }
+
+    @GetMapping("origem/{origem}")
+    public List<Event> findByOrigem (@PathVariable("origem") String origem) {
+        return  service.findByOrigem(origem);
+    }
     @GetMapping
     public List<EventDTO> findByAll() {
         List<Event> all = service.findAll();

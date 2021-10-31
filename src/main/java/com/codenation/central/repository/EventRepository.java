@@ -1,6 +1,7 @@
 package com.codenation.central.repository;
 
 import com.codenation.central.entity.Event;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
   Optional<Event> findById(Long id);
+  Page<Event> findAll(Pageable pageable);
   List<Event> findAllByLog(String Log, Pageable pageable);
   List<Event> findAllByOrigem(String origem, Pageable pageable);
   List<Event> findAllByDescription(String description, Pageable pageable);

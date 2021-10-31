@@ -25,8 +25,8 @@ public class EventService implements EventServiceInterface {
   }
 
   @Override
-  public List<Event> findAll() {
-    return repository.findAll();
+  public Page<Event> findAll(Pageable pageable) {
+    return repository.findAll(pageable);
   }
 
   public List<Event> findByLog(String log, Pageable pageable) {

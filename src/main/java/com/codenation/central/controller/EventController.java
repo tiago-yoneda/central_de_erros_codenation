@@ -5,6 +5,7 @@ import com.codenation.central.entity.Event;
 import com.codenation.central.entity.EventDTO;
 import com.codenation.central.service.implementation.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -57,8 +58,8 @@ public class EventController {
     }
 
     @GetMapping
-    public List<EventDTO> findAll() {
-        List<Event> all = service.findAll();
+    public List<EventDTO> findAll(Pageable pageable) {
+        Page<Event> all = service.findAll(pageable);
         List<EventDTO> output = new ArrayList<>();
 
         for ( Event event : all){

@@ -182,45 +182,45 @@ public class EventSeeder implements ApplicationRunner {
         event20.setQuantity("13");
         eventService.save(event20);
 
-//        Event event = new Event();
-//        event.setLevel("error");
-//        event.setOrigem("Application");
-//        event.setLog("Exception ...");
-//        event.setDescription("");
-//        event.setQuantity("3");
-//        eventService.save(event);
-//
-//        Event event = new Event();
-//        event.setLevel("error");
-//        event.setOrigem("Application");
-//        event.setLog("Exception ...");
-//        event.setDescription("");
-//        event.setQuantity("3");
-//        eventService.save(event);
-//
-//        Event event = new Event();
-//        event.setLevel("error");
-//        event.setOrigem("Application");
-//        event.setLog("Exception ...");
-//        event.setDescription("");
-//        event.setQuantity("3");
-//        eventService.save(event);
-//
-//        Event event = new Event();
-//        event.setLevel("error");
-//        event.setOrigem("Application");
-//        event.setLog("Exception ...");
-//        event.setDescription("");
-//        event.setQuantity("3");
-//        eventService.save(event);
-//
-//        Event event = new Event();
-//        event.setLevel("error");
-//        event.setOrigem("Application");
-//        event.setLog("Exception ...");
-//        event.setDescription("");
-//        event.setQuantity("3");
-//        eventService.save(event);
+        Event event21 = new Event();
+        event21.setLevel("error");
+        event21.setOrigem("Application");
+        event21.setLog("Exception IllegalClassFormatException...");
+        event21.setDescription("Thrown by an implementation of ClassFileTransformer.transform when its input parameters are invalid.");
+        event21.setQuantity("13");
+        eventService.save(event21);
+
+        Event event22 = new Event();
+        event22.setLevel("error");
+        event22.setOrigem("Application");
+        event22.setLog("Exception InterruptedException...");
+        event22.setDescription("Thrown when a thread is waiting, sleeping, or otherwise occupied, and the thread is interrupted, either before or during the activity");
+        event22.setQuantity("34");
+        eventService.save(event);
+
+        Event event23 = new Event();
+        event23.setLevel("error");
+        event23.setOrigem("Application");
+        event23.setLog("Exception IntrospectionException...");
+        event23.setDescription("Thrown when an exception happens during Introspection.");
+        event23.setQuantity("54");
+        eventService.save(event23);
+
+        Event event24 = new Event();
+        event24.setLevel("error");
+        event24.setOrigem("Application");
+        event24.setLog("Exception InvalidApplicationException...");
+        event24.setDescription("Thrown when an attempt is made to apply either of the following: A subquery expression to an MBean or a qualified attribute expression to an MBean of the wrong class.");
+        event24.setQuantity("6");
+        eventService.save(event24);
+
+        Event event25 = new Event();
+        event25.setLevel("error");
+        event25.setOrigem("Application");
+        event25.setLog("Exception InvalidMidiDataException...");
+        event25.setDescription("An InvalidMidiDataException indicates that inappropriate MIDI data was encountered. This often means that the data is invalid in and of itself.");
+        event25.setQuantity("3");
+        eventService.save(event25);
 //
 //        Event event = new Event();
 //        event.setLevel("error");

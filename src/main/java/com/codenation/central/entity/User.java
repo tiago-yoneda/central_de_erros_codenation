@@ -33,5 +33,4 @@ public class User {
   @CreatedDate
   private LocalDateTime createdAt;
 
-
 }

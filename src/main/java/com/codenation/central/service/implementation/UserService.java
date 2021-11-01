@@ -27,8 +27,13 @@ public class UserService implements UserServiceInterface {
         return repository.findById(id);
     }
 
+    @Override
     public List<User> findAll() {
         return repository.findAll();
     }
 
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 }

@@ -1,7 +1,6 @@
 package com.codenation.central.seeds;
 
 import com.codenation.central.entity.User;
-import com.codenation.central.service.implementation.EventService;
 import com.codenation.central.service.implementation.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

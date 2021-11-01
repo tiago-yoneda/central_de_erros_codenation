@@ -24,4 +24,6 @@ public interface EventServiceInterface extends ServiceInterface<Event> {
 
   List<Event> findByLevel(String level, Pageable pageable);
 
+  List<Event> findByQuantity(String quantity, Pageable pageable);
+
 }

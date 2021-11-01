@@ -7,7 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Getter
@@ -33,7 +32,6 @@ public class User {
   @Column
   @CreatedDate
   private LocalDateTime createdAt;
-//
-  @OneToMany(mappedBy = "userId")
-  private List<Event> events;
+
+
 }

@@ -1,17 +1,14 @@
 package com.codenation.central.controller;
 
 import com.codenation.central.entity.Event;
-//import com.codenation.central.mapper.EventMapper;
 import com.codenation.central.entity.EventDTO;
 import com.codenation.central.service.implementation.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,9 +18,6 @@ public class EventController {
 
     @Autowired
     private EventService service;
-//
-//    @Autowired
-//    private EventMapper eventMapper;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -60,6 +54,11 @@ public class EventController {
     @GetMapping("level/{level}")
     public List<Event> findByLevel (@PathVariable("level") String level, Pageable pageable) {
         return  service.findByLevel(level, pageable);
+    }
+
+    @GetMapping("quantity/{quantity}")
+    public List<Event> findByQuantity (@PathVariable("quantity") String quantity, Pageable pageable) {
+        return  service.findByQuantity(quantity, pageable);
     }
 
     @GetMapping

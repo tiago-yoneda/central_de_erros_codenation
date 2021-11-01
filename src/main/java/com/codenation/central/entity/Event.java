@@ -33,24 +33,8 @@ public class Event {
   @Column
   @CreatedDate
   private LocalDateTime createdAt;
-//
-//  @ManyToOne
-//  @JoinColumn(name = "users_id")
-//  private User user_id;
-//
-  @ManyToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "userId")
-  private User userId;
 
-  // quantidade
+  @Column
+  private String quantity;
 
-  //user_id many to oneusers_id
-//  {
-//    "user_id": 3,
-//          "name": "Arna",
-//          "email": "arna@arna.com",
-//          "password": "123",
-//          "createdAt": "2021-10-31T15:57:27.417327242",
-//          "events": null
-//  }
 }

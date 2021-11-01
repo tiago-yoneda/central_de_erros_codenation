@@ -19,7 +19,6 @@ public class EventDTO {
 
   private LocalDateTime createdAt;
 
-  // quantidade
+  private String quantity;
 
-  //user_id many to one
 }

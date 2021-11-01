@@ -37,6 +37,7 @@ public class EventService implements EventServiceInterface {
             eventDTO.setDescription(event.getDescription());
             eventDTO.setLevel(event.getLevel());
             eventDTO.setOrigem(event.getOrigem());
+            eventDTO.setQuantity(event.getQuantity());
             output.add(eventDTO);
         }
         return output;
@@ -65,6 +66,11 @@ public class EventService implements EventServiceInterface {
     @Override
     public List<Event> findByLevel(String level, Pageable pageable) {
         return repository.findAllByLevel(level, pageable);
+    }
+
+    @Override
+    public List<Event> findByQuantity(String quantity, Pageable pageable) {
+        return repository.findAllByQuantity(quantity, pageable);
     }
 
     @Override

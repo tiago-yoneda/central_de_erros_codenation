@@ -1,6 +1,5 @@
 package com.codenation.central.seeds;
 
-import com.codenation.central.entity.Event;
 import com.codenation.central.entity.User;
 import com.codenation.central.service.implementation.EventService;
 import com.codenation.central.service.implementation.UserService;
@@ -13,9 +12,6 @@ import org.springframework.context.annotation.Configuration;
 public class UserSeeder implements ApplicationRunner {
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private EventService eventService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {

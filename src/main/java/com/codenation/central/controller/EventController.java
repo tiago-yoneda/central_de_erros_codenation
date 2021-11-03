@@ -3,6 +3,7 @@ package com.codenation.central.controller;
 import com.codenation.central.entity.Event;
 import com.codenation.central.entity.EventDTO;
 import com.codenation.central.service.implementation.EventService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/events")
+@CrossOrigin(origins = "*")
 public class EventController {
 
     @Autowired
